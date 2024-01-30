@@ -31,6 +31,8 @@ Check out the [documentation](https://www.w3schools.com/tags/tag_audio.asp) for 
 ### Zero data
 
 Design for zero data. Make your page look nice while the station list is loading by creating a "skeleton loader". Consider using the Chrome [network throttler](https://developers.google.com/web/tools/chrome-devtools/network-performance/network-conditions) to simulate a slow connection and make it easier to test your code.
+Use this library to include a skeleton loader in your project:
+[https://github.com/dvtng/react-loading-skeleton](https://github.com/dvtng/react-loading-skeleton).
 
 ### Filter
 
