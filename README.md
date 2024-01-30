@@ -26,7 +26,17 @@ The Sveriges Radio API seems to work without any sort of authentication, so that
 
 ### Audio
 
-Check out the [documentation](https://www.w3schools.com/tags/tag_audio.asp) for the `<audio>` tag. The format for the stream is mp3, so you'll need to use a `<source>` with the "type" of "audio/mpeg".
+Check out the [documentation](https://www.w3schools.com/tags/tag_audio.asp) for the `<audio>` tag. The format for the stream is mp3, so you'll need to use a `<source>` with the "type" of "audio/mpeg". Don't worry if there is no sound playing. It seems to happen sometimes with this api.
+
+### Zero data
+
+Design for zero data. Make your page look nice while the station list is loading by creating a "skeleton loader". Consider using the Chrome [network throttler](https://developers.google.com/web/tools/chrome-devtools/network-performance/network-conditions) to simulate a slow connection and make it easier to test your code.
+
+### Filter
+
+The task is to implement a search function which calls .filter() on the station list to decide which channels to render.
+
+You will need use the onChange attribute on an input to invoke a function which will use the input's value in the .filter() call to filter the stations. If you want the search to be more flexible, look into using regular expressions from the input value!
 
 ## Hand in assignment
 
@@ -69,17 +79,3 @@ Learning how to think as a web developer is learning how to be an expert in prob
 After completing this assignment you should be more comfortable using APIs, and have a little more of an idea of what you'd use an API for. You should be comfortable using `fetch()` now, and using the success callback to set state in React, to get data from the API into your page.
 
 ---
-
-### :runner: Stretch Goals
-
-#### First stretch goal
-
-Design for zero data. Make your page look nice while the station list is loading by creating a "skeleton loader", like we discussed during the lecture. Consider using the Chrome [network throttler](https://developers.google.com/web/tools/chrome-devtools/network-performance/network-conditions) to simulate a slow connection and make it easier to test your code.
-
-#### Second stretch goal
-
-This task has one more stretch goal, but it is a little tough, and you'll need to do some research to complete it.
-
-The task is to implement a search function which calls `.filter()` on the station list to decide which channels to render. This stretch goal requires you to research how to control form inputs.
-
-You will need use the `onChange` attribute on an input to invoke a function which will use the input's value in the `.filter()` call to filter the stations. If you want the search to be more flexible, look into using [regular expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) from the input value!
